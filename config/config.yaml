@@ -1,0 +1,14 @@
+# It is used for anything which are storing to understand than we use config.yaml(just ike data)
+
+
+
+artifacts_root : artifacts  # It will create a folder
+
+data_ingestion:      # It will create a another folder as data ingestion
+    root_dir: artifacts/data_ingestion
+    source_URL: https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing  # It is a link of google drive from we are importing the data
+    local_data_file: artifacts/data_ingestion/data.zip  # Here we are passing the link for importing the data which is in zip
+    unzip_dir: artifacts/data_ingestion  # Here we are unziping the file
+
+
+
