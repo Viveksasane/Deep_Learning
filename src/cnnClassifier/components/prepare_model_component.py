@@ -1,10 +1,9 @@
-
 import os
 import urllib.request as request
 from zipfile import ZipFile
 import tensorflow as tf
-from src.cnnClassifier.entity.config import PrepareBaseModelConfig
 from pathlib import Path
+from src.cnnClassifier.config.configuration import PrepareBaseModelConfig
 
 
 class PrepareBaseModel:
@@ -26,7 +25,7 @@ class PrepareBaseModel:
     @staticmethod
     def _prepare_full_model(model, classes, freeze_all, freeze_till, learning_rate):
         if freeze_all:
-            for layer in model.layers:    # The model is already run that's why we have return this function
+            for layer in model.layers:
                 model.trainable = False
         elif (freeze_till is not None) and (freeze_till > 0):
             for layer in model.layers[:-freeze_till]:
@@ -54,7 +53,7 @@ class PrepareBaseModel:
     
     
     def update_base_model(self):
-        self.full_model = self._prepare_full_model(
+        self.full_model = self._prepare_full_model( # Private protected method it is used only this class
             model=self.model,
             classes=self.config.params_classes,
             freeze_all=True,
