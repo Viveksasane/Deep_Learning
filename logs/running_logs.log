@@ -322,3 +322,241 @@ x==========x]
 [2026-01-13 13:02:42,509: INFO: main: >>>>>> stage Evaluation completed <<<<<<
 
 x==========x]
+[2026-01-13 13:33:24,932: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-01-13 13:33:24,933: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-01-13 13:33:24,937: INFO: _internal:  * Restarting with stat]
+[2026-01-13 13:33:36,849: WARNING: _internal:  * Debugger is active!]
+[2026-01-13 13:33:36,864: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-13 13:33:50,780: INFO: _internal: 127.0.0.1 - - [13/Jan/2026 13:33:50] "GET / HTTP/1.1" 200 -]
+[2026-01-13 13:37:51,088: INFO: _internal: 127.0.0.1 - - [13/Jan/2026 13:37:51] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:15:41,782: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-01-14 12:15:41,782: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-01-14 12:15:41,790: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:15:58,650: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:15:58,690: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:17:04,223: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:17:04] "GET / HTTP/1.1" 200 -]
+[2026-01-14 12:17:47,252: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:17:47] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:17:58,261: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:17:58] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:18:15,144: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:18:15] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:18:33,225: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:18:33] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:19:04,096: WARNING: polymorphic_function: 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002A468931A20> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2026-01-14 12:19:04,702: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:19:04] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:19:39,678: WARNING: polymorphic_function: 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x000002A468D0EB90> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2026-01-14 12:19:39,734: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:19:39] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:22:57,148: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-01-14 12:22:57,188: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:22:57,209: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:22:57,209: INFO: common: created directory at: artifacts]
+[2026-01-14 12:22:57,209: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-01-14 12:22:57,209: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-01-14 12:23:07,622: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-01-14 12:23:27,148: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-01-14 12:23:27,148: INFO: main: *******************]
+[2026-01-14 12:23:27,150: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-01-14 12:23:27,230: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:23:27,233: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:23:27,238: INFO: common: created directory at: artifacts]
+[2026-01-14 12:23:27,283: INFO: common: created directory at: artifacts/prepare_base_model]
+[2026-01-14 12:23:33,484: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2026-01-14 12:23:33,484: INFO: main: *******************]
+[2026-01-14 12:23:33,484: INFO: main: >>>>>> stage Training started <<<<<<]
+[2026-01-14 12:23:33,488: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:23:33,494: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:23:33,498: INFO: common: created directory at: artifacts]
+[2026-01-14 12:23:33,498: INFO: common: created directory at: artifacts\training]
+[2026-01-14 12:26:47,267: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2026-01-14 12:26:47,268: INFO: main: *******************]
+[2026-01-14 12:26:47,268: INFO: main: >>>>>> stage Evaluation started <<<<<<]
+[2026-01-14 12:26:47,276: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:26:47,282: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:26:47,287: INFO: common: created directory at: artifacts]
+[2026-01-14 12:27:14,186: INFO: common: json file saved at: scores.json]
+[2026-01-14 12:27:17,125: ERROR: main: [Errno 22] Invalid argument: 'artifacts\\training\\model.keras']
+Traceback (most recent call last):
+  File "D:\AI_project\Deep_Learning\main.py", line 47, in <module>
+    model_evalution.main()
+  File "D:\AI_project\Deep_Learning\src\cnnClassifier\pipeline\stage_04.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "D:\AI_project\Deep_Learning\src\cnnClassifier\components\model_evaluate.py", line 83, in log_into_mlflow
+    self.model.save(model_path)
+  File "C:\Users\Vivek\anaconda3\envs\myenv\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Vivek\anaconda3\envs\myenv\lib\site-packages\keras\src\saving\saving_lib.py", line 141, in save_model
+    with open(filepath, "wb") as f:
+OSError: [Errno 22] Invalid argument: 'artifacts\\training\\model.keras'
+[2026-01-14 12:35:43,432: INFO: _internal:  * Detected change in 'D:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:35:46,409: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:36:03,509: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:36:03,518: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:36:08,759: INFO: _internal:  * Detected change in 'D:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:36:09,617: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:36:25,375: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:36:25,386: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:36:27,549: INFO: _internal:  * Detected change in 'd:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:36:28,932: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:36:43,538: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:36:43,549: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:36:44,663: INFO: _internal:  * Detected change in 'D:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:36:45,600: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:36:55,998: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:36:56,005: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:37:03,420: INFO: _internal:  * Detected change in 'd:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:37:04,633: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:37:14,489: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:37:14,495: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:37:19,663: INFO: _internal:  * Detected change in 'd:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:37:20,751: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:37:29,619: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:37:29,626: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:37:32,783: INFO: _internal:  * Detected change in 'D:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:37:34,765: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:37:45,048: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:37:45,059: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:38:03,029: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-01-14 12:38:03,031: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:38:03,034: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:38:03,036: INFO: common: created directory at: artifacts]
+[2026-01-14 12:38:03,036: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-01-14 12:38:03,038: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-01-14 12:38:11,253: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-01-14 12:38:12,061: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-01-14 12:38:12,062: INFO: main: *******************]
+[2026-01-14 12:38:12,064: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-01-14 12:38:12,068: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:38:12,073: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:38:12,073: INFO: common: created directory at: artifacts]
+[2026-01-14 12:38:12,073: INFO: common: created directory at: artifacts/prepare_base_model]
+[2026-01-14 12:38:13,483: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2026-01-14 12:38:13,485: INFO: main: *******************]
+[2026-01-14 12:38:13,485: INFO: main: >>>>>> stage Training started <<<<<<]
+[2026-01-14 12:38:13,485: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:38:13,489: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:38:13,489: INFO: common: created directory at: artifacts]
+[2026-01-14 12:38:13,491: INFO: common: created directory at: artifacts\training]
+[2026-01-14 12:41:12,683: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2026-01-14 12:41:12,683: INFO: main: *******************]
+[2026-01-14 12:41:12,683: INFO: main: >>>>>> stage Evaluation started <<<<<<]
+[2026-01-14 12:41:12,687: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:41:12,689: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:41:12,689: INFO: common: created directory at: artifacts]
+[2026-01-14 12:41:35,888: INFO: common: json file saved at: scores.json]
+[2026-01-14 12:41:38,336: ERROR: main: [Errno 22] Invalid argument: 'artifacts\\training\\model.keras']
+Traceback (most recent call last):
+  File "D:\AI_project\Deep_Learning\main.py", line 47, in <module>
+    model_evalution.main()
+  File "D:\AI_project\Deep_Learning\src\cnnClassifier\pipeline\stage_04.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "D:\AI_project\Deep_Learning\src\cnnClassifier\components\model_evaluate.py", line 81, in log_into_mlflow
+    self.model.save(str(model_path))
+  File "C:\Users\Vivek\anaconda3\envs\myenv\lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Vivek\anaconda3\envs\myenv\lib\site-packages\keras\src\saving\saving_lib.py", line 141, in save_model
+    with open(filepath, "wb") as f:
+OSError: [Errno 22] Invalid argument: 'artifacts\\training\\model.keras'
+[2026-01-14 12:42:34,907: INFO: _internal:  * Detected change in 'd:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:42:36,515: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:42:50,719: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:42:50,723: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:42:54,913: INFO: _internal:  * Detected change in 'D:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:42:55,952: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:43:07,089: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:43:07,089: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:43:19,945: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-01-14 12:43:19,949: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:43:19,949: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:43:19,949: INFO: common: created directory at: artifacts]
+[2026-01-14 12:43:19,949: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-01-14 12:43:19,954: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-01-14 12:43:44,199: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2026-01-14 12:43:44,939: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-01-14 12:43:44,939: INFO: main: *******************]
+[2026-01-14 12:43:44,941: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2026-01-14 12:43:44,945: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:43:44,947: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:43:44,949: INFO: common: created directory at: artifacts]
+[2026-01-14 12:43:44,949: INFO: common: created directory at: artifacts/prepare_base_model]
+[2026-01-14 12:43:46,303: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2026-01-14 12:43:46,308: INFO: main: *******************]
+[2026-01-14 12:43:46,308: INFO: main: >>>>>> stage Training started <<<<<<]
+[2026-01-14 12:43:46,312: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:43:46,312: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:43:46,314: INFO: common: created directory at: artifacts]
+[2026-01-14 12:43:46,316: INFO: common: created directory at: artifacts\training]
+[2026-01-14 12:45:15,003: INFO: _internal:  * Detected change in 'D:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\components\\model_evaluate.py', reloading]
+[2026-01-14 12:45:18,082: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:45:48,259: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:45:48,281: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:47:20,749: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2026-01-14 12:47:20,749: INFO: main: *******************]
+[2026-01-14 12:47:20,749: INFO: main: >>>>>> stage Evaluation started <<<<<<]
+[2026-01-14 12:47:20,749: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-01-14 12:47:20,749: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-01-14 12:47:20,749: INFO: common: created directory at: artifacts]
+[2026-01-14 12:47:46,225: INFO: common: json file saved at: scores.json]
+[2026-01-14 12:48:31,872: INFO: main: >>>>>> stage Evaluation completed <<<<<<
+
+x==========x]
+[2026-01-14 12:49:48,316: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-01-14 12:49:48,318: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-01-14 12:49:48,321: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:49:55,129: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:49:55,136: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:50:29,585: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-01-14 12:50:29,586: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-01-14 12:50:29,589: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:50:37,766: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:50:37,778: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:50:37,859: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:50:37] "GET / HTTP/1.1" 200 -]
+[2026-01-14 12:50:48,667: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:50:48] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:50:58,549: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:50:58] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:51:07,764: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:51:07] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:51:17,583: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:51:17] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:51:28,112: WARNING: polymorphic_function: 5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000025B682C16C0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2026-01-14 12:51:28,171: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:51:28] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:51:39,953: WARNING: polymorphic_function: 6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x0000025B65136EF0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2026-01-14 12:51:40,329: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:51:40] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:51:50,611: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:51:50] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:52:04,559: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:52:04] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:52:13,263: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:52:13] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:52:21,486: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:52:21] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:52:31,947: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:52:31] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:52:43,312: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:52:43] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:56:51,543: INFO: _internal:  * Detected change in 'd:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\pipeline\\predict.py', reloading]
+[2026-01-14 12:56:54,595: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:57:04,649: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:57:04,653: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:57:26,055: INFO: _internal:  * Detected change in 'd:\\AI_project\\Deep_Learning\\src\\cnnClassifier\\pipeline\\predict.py', reloading]
+[2026-01-14 12:57:28,822: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:57:48,841: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:57:48,850: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:58:24,955: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-01-14 12:58:24,960: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-01-14 12:58:24,963: INFO: _internal:  * Restarting with stat]
+[2026-01-14 12:58:32,479: WARNING: _internal:  * Debugger is active!]
+[2026-01-14 12:58:32,487: INFO: _internal:  * Debugger PIN: 395-669-885]
+[2026-01-14 12:58:47,759: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:58:47] "GET / HTTP/1.1" 200 -]
+[2026-01-14 12:59:00,078: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:59:00] "POST /predict HTTP/1.1" 200 -]
+[2026-01-14 12:59:20,075: INFO: _internal: 127.0.0.1 - - [14/Jan/2026 12:59:20] "POST /predict HTTP/1.1" 200 -]

@@ -68,26 +68,23 @@ class Evaluation:
     def log_into_mlflow(self):
         mlflow.set_registry_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
-        # ✅ Model path
         model_path = Path("artifacts/training/model.keras")
         model_path.parent.mkdir(parents=True, exist_ok=True)
         with mlflow.start_run() as run:
-            # Log params & metrics
+            #✅ Log params & metric
             mlflow.log_params(self.config.all_params)
             mlflow.log_metrics({
-            "loss": self.score[0],
-            "accuracy": self.score[1]
+            "loss": float(self.score[0]),
+            "accuracy": float(self.score[1])
         })
+            # ✅ Save model (INSIDE run & as string)
+            self.model.save(str(model_path))
+            # ✅ Log artifact
+            mlflow.log_artifact(str(model_path), artifact_path="model")
 
-        # ✅ Save model
-        self.model.save(model_path)
-
-        # ✅ Log model as artifact
-        mlflow.log_artifact(str(model_path), artifact_path="model")
-
-        # ✅ Register model only if not local file store
-        if tracking_url_type_store != "file":
-            mlflow.register_model(
+        # ✅ Register model
+            if tracking_url_type_store != "file":
+                mlflow.register_model(
                 model_uri=f"runs:/{run.info.run_id}/model",
                 name="VGG16Model"
             )
