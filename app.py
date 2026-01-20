@@ -46,7 +46,6 @@ def predictRoute():
 
 if __name__ == "__main__":
     clApp = ClientApp()
-    app.run(debug=True)
-
-    #app.run(host='0.0.0.0', port=8080) #for AWS  if we want to upload the model on AWS
+    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080) #for AWS  if we want to upload the model on AWS
 
